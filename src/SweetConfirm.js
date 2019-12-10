@@ -9,9 +9,30 @@
  * @param {Object} options
  */
 
-var SweetConfirm = function(element, callback, options = {}) {
+var SweetConfirm = function(element, callback, options) {
   //
   var timer, name;
+
+  if (!options) {
+    options = {
+      background: "#0f4c81",
+      backgroundSize: "215% 100%",
+      backgroundPositionIn: "right bottom",
+      backgroundPositionOut: "left bottom",
+      transitionOut: 0.5,
+      gradient: {
+        deg: "135deg",
+        from_color: "#0f4c81 50%",
+        to_color: "#fa7268 50%"
+      },
+      question: "🤔 Are you sure?",
+      success: {
+        message: "👍 Success!",
+        color: "#00b16a"
+      },
+      timeout: 3000
+    };
+  }
 
   //
   name = element.innerHTML;
