@@ -19,7 +19,7 @@
 </p>
 
 <p align="center">
-  A useful <strong>zero-dependencies</strong>, only <strong>608 Byte</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
+  A useful <strong>zero-dependencies</strong>, only <strong>608 Byte</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution<br/>for <strong>drop an annoying pop-ups</strong> confirming the submission of form in your web apps.
 </p>
 
 ## Install
