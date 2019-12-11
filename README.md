@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://badge.fury.io/js/sweetconfirm.js.svg" alt="npm version"/>
-  <img src="https://img.shields.io/badge/minified_and_gzipped-608_Byte-blue.svg" alt="bundle size"/>
+  <img src="https://img.shields.io/badge/minified_and_gzipped-438_Bytes-blue.svg" alt="bundle size"/>
   <a href="https://www.jsdelivr.com/package/npm/sweetconfirm.js" target="_blank">
     <img src="https://data.jsdelivr.com/v1/package/npm/sweetconfirm.js/badge?style=rounded" alt="jsDelivr download"/>
   </a>
@@ -22,10 +22,12 @@
 </p>
 
 <p align="center">
-  A useful <strong>zero-dependencies</strong>, only <strong>608 Byte</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution<br/>for <strong>drop an annoying pop-ups</strong> confirming the submission of form in your web apps.
+  A useful <strong>zero-dependencies</strong>, less than <strong>450 Bytes</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution<br/>for <strong>drop an annoying pop-ups</strong> confirming the submission of form in your web apps.
 </p>
 
 ## Install
+
+Simple install via `npm`:
 
 ```console
 foo@bar:~$ npm install --save sweetconfirm.js
@@ -38,28 +40,27 @@ Let's start with HTML page and some CSS styles for submit button (`./index.html`
 ```html
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <title>Document</title>
-        <style>
-            button {
-                display: block;
-                border-radius: 30px;
-                cursor: pointer;
-            }
-        </style>
-    </head>
-    <body>
-        <button type="submit" id="button">💬 Push the button!</button>
-        <script src="./script.js"></script>
-    </body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      button {
+        display: block;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <button type="submit" id="button">💬 Push the button!</button>
+    <script src="./script.js"></script>
+  </body>
 </html>
 ```
 
 Next, time for JavaScript (`./script.js`):
-
 
 ```js
 import { SweetConfirm } from "sweetconfirm.js";
@@ -73,28 +74,28 @@ new SweetConfirm(button, () => {
 });
 ```
 
-### What about options?
+## What about options?
 
 ```console
 function SweetConfirm ( element, function () {...}, [options, ...] )
 ```
 
-| **Option** | **Description** | **Default value** |
-|---|---|---|
-| `background` | Background color for initial state, may be equal to `gradient.from_color` | `#0f4c81` |
-| `backgroundSize` | Size of `background`; for better effect must be greather than 100% at the first value | `215% 100%` |
-| `backgroundPositionIn` | Background position for init animation | `right bottom` |
-| `backgroundPositionOut` | Background position for end animation | `left bottom` |
-| `transitionOut` | A `transition` speed of out action, like `mouseup` | `0.5` |
-| `gradient.deg` | Angle or position of the gradient line's starting point | `135deg` |
-| `gradient.from_color` | From (start) color | `#0f4c81 50%` |
-| `gradient.to_color` | To (stop, end) color | `#fa7268 50%` |
-| `question` | Message during holding mouse/key button on `element` | `🤔 Are you sure?` |
-| `success.message` | Message after callback function | `👍 Success!` |
-| `success.color` | Color of success message | `#00b16a` |
-| `timeout` | Time for `setTimeout()` function in miliseconds; this option also define a `transition` speed | `3000` |
+| **Option**              | **Description**                                                                               | **Default value**  |
+| ----------------------- | --------------------------------------------------------------------------------------------- | ------------------ |
+| `background`            | Background color for initial state, may be equal to `gradient.from_color`                     | `#0f4c81`          |
+| `backgroundSize`        | Size of `background`; for better effect must be greather than 100% at the first value         | `215% 100%`        |
+| `backgroundPositionIn`  | Background position for init animation                                                        | `right bottom`     |
+| `backgroundPositionOut` | Background position for end animation                                                         | `left bottom`      |
+| `transitionOut`         | A `transition` speed of out action, like `mouseup`                                            | `0.5`              |
+| `gradient.deg`          | Angle or position of the gradient line's starting point                                       | `135deg`           |
+| `gradient.from_color`   | From (start) color                                                                            | `#0f4c81 50%`      |
+| `gradient.to_color`     | To (stop, end) color                                                                          | `#fa7268 50%`      |
+| `question`              | Message during holding mouse/key button on `element`                                          | `🤔 Are you sure?` |
+| `success.message`       | Message after callback function                                                               | `👍 Success!`      |
+| `success.color`         | Color of success message                                                                      | `#00b16a`          |
+| `timeout`               | Time for `setTimeout()` function in miliseconds; this option also define a `transition` speed | `3000`             |
 
-#### Use SweetConfirm.js with options
+### Use SweetConfirm.js with custom options
 
 ```js
 // Define options
@@ -120,6 +121,20 @@ var options = {
 // Init SweetConfirm.js with options
 new SweetConfirm(element, () => {}, options);
 ```
+
+## Size limit report
+
+```console
+foo@bar:~$ npm run size
+
+  Time limit:   90 ms
+  Size:         438 B with all dependencies, minified and gzipped
+  Loading time: 10 ms on slow 3G
+  Running time: 77 ms on Snapdragon 410
+  Total time:   87 ms
+```
+
+_Thanks to Andrey Sitnik [@ai/size-limit](https://github.com/ai/size-limit)._
 
 ## Developers
 

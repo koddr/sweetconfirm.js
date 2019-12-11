@@ -1,21 +1,19 @@
 {
   "name": "sweetconfirm.js",
-  "version": "0.1.0",
-  "description": "A zero-dependencies pure JavaScript UX tool for improve confirmation when user submit form.",
+  "version": "0.1.1",
+  "description": "A useful zero-dependencies, less than 450 Bytes (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.",
   "main": "sweetconfirm.min.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "rollup --config ./rollup.config.js"
+    "build": "rollup --config ./rollup.config.js",
+    "watch": "rollup --config ./rollup.config.js --watch --compact",
+    "size": "npm run build && size-limit",
+    "size:why": "npm run size -- --why"
   },
-  "keywords": [
-    "confirm",
-    "success button",
-    "confirm event"
-  ],
-  "author": "Vic Shóstak",
-  "license": "MIT",
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.13.0",
+    "@size-limit/preset-small-lib": "^2.2.2",
+    "@size-limit/time": "^2.2.2",
     "eslint": "^6.7.2",
     "eslint-config-prettier": "^6.7.0",
     "eslint-config-standard": "^14.1.0",
@@ -23,5 +21,24 @@
     "eslint-plugin-node": "^10.0.0",
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.1"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/koddr/sweetconfirm.js.git"
+  },
+  "bugs": {
+    "url": "https://github.com/koddr/sweetconfirm.js/issues",
+    "email": "truewebartisans@gmail.com"
+  },
+  "homepage": "https://github.com/koddr/sweetconfirm.js#readme",
+  "keywords": [
+    "confirm",
+    "success button",
+    "confirm event",
+    "submit button",
+    "button gradient",
+    "button effect"
+  ],
+  "author": "Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)",
+  "license": "MIT"
 }

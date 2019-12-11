@@ -1,7 +1,7 @@
 /**
  * @name SweetConfirm.js
- * @description A zero-dependencies pure JavaScript UX tool for improve confirmation when user submit form.
- * @copyright 2019 Vic Shóstak (https://1wa.co)
+ * @description A useful zero-dependencies, only 438 Byte (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
+ * @copyright 2019 Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
  *
  * @author Vic Shóstak
  * @param {HTMLElement} element
@@ -10,9 +10,10 @@
  */
 
 var SweetConfirm = function(element, callback, options) {
-  //
+  // Define vars
   var timer, name;
 
+  // If options is not define use default
   if (!options) {
     options = {
       background: "#0f4c81",
@@ -34,52 +35,52 @@ var SweetConfirm = function(element, callback, options) {
     };
   }
 
-  //
-  name = element.innerHTML;
+  // Save element name
+  name = element.innerText;
 
-  //
+  // Init styles for element
   element.style.background = options.background;
   element.style.background = `linear-gradient(${options.gradient.deg}, ${options.gradient.from_color}, ${options.gradient.to_color})`;
   element.style.backgroundSize = options.backgroundSize;
   element.style.backgroundPosition = options.backgroundPositionIn;
   element.style.transition = `all ${options.timeout / 1000}s ease`;
 
-  //
+  // Event: hold mouse/key button on element
   ["mousedown"].forEach(event => {
-    //
     element.addEventListener(event, () => {
-      //
-      element.innerHTML = options.question;
+      // Show question when holding
+      element.innerText = options.question;
       element.style.backgroundPosition = options.backgroundPositionOut;
       element.style.transition = `all ${options.timeout / 1000}s ease`;
 
-      //
+      // Run timeout function when holding
       timer = window.setTimeout(function() {
-        //
+        // If timeout is gone: apply success color, disabled element
+        // and change transition
         element.disabled = true;
         element.style.background = options.success.color;
         element.style.transition = `all ${options.transitionOut}s ease`;
 
-        //
-        element.innerHTML = options.success.message;
+        // Show success message
+        element.innerText = options.success.message;
 
-        //
+        // Run callback function
         callback();
       }, options.timeout);
     });
   });
 
-  //
+  // Event: un-hold mouse/key button on element
   ["mouseup"].forEach(event => {
     element.addEventListener(event, () => {
-      //
-      element.innerHTML = name;
+      // Return element name
+      element.innerText = name;
 
-      //
+      // Follow back effect: change background and transition
       element.style.backgroundPosition = options.backgroundPositionIn;
       element.style.transition = `all ${options.transitionOut}s ease`;
 
-      //
+      // Clear timeout
       window.clearTimeout(timer);
     });
   });
