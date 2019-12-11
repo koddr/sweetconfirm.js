@@ -1,9 +1,8 @@
 <p align="center">
-  <img width="640px" src="https://user-images.githubusercontent.com/11155743/70644758-ac31d900-1c54-11ea-854b-ef0847071dba.png" alt="sweetconfirm.js logo github"/>
+  <img width="600px" src="https://user-images.githubusercontent.com/11155743/70644758-ac31d900-1c54-11ea-854b-ef0847071dba.png" alt="sweetconfirm.js logo github"/>
 </p>
 
-<h1 align="center">👌 SweetConfirm.js</h1>
-<h4 align="center">Drop an annoying pop-ups confirming the submission of form in your web apps!</h4>
+<h1 align="center">Throw out pop-ups confirming the submission of form!</h1>
 
 <p align="center">
   <img width="100%" src="https://user-images.githubusercontent.com/11155743/70600686-613aa600-1c01-11ea-9002-5825ec8f98cf.gif" alt="sweetconfirm.js demo gif"/>
@@ -34,31 +33,43 @@ foo@bar:~$ npm install --save sweetconfirm.js
 
 ## How to use?
 
-````css
-/* ./style.css */
-
-button {
-  display: block;
-  border-radius: 30px;
-  cursor: pointer;
-}
-```
+Let's start with HTML page and some CSS styles for submit button (`./index.html`):
 
 ```html
-<!-- ./index.html -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Document</title>
+        <style>
+            button {
+                display: block;
+                border-radius: 30px;
+                cursor: pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <button type="submit" id="button">💬 Push the button!</button>
+        <script src="./script.js"></script>
+    </body>
+</html>
+```
 
-<button id="button">💬 Push the button!</button>
-````
+Next, time for JavaScript:
+
 
 ```js
 // ./script.js
 
 import { SweetConfirm } from "sweetconfirm.js";
 
-//
+// Define element (button)
 var button = document.getElementById("button");
 
-//
+// Init SweetConfirm.js to element with callback
 new SweetConfirm(button, text => {
   console.log("This is fake data!");
 });
@@ -67,11 +78,28 @@ new SweetConfirm(button, text => {
 ### What about options?
 
 ```console
-SweetConfirm ( element, function () {...}, [options, ...] )
+function SweetConfirm ( element, function () {...}, [options, ...] )
 ```
 
+| **Option** | **Description** | **Default value** |
+|---|---|---|
+| `background` | Background color for initial state, may be equal to `gradient.from_color` | `#0f4c81` |
+| `backgroundSize` | Size of `background`; for better effect must be greather than 100% at the first value | `215% 100%` |
+| `backgroundPositionIn` | Background position for init animation | `right bottom` |
+| `backgroundPositionOut` | Background position for end animation | `left bottom` |
+| `transitionOut` | A `transition` speed of out action, like `mouseup` | `0.5` |
+| `gradient.deg` | Angle or position of the gradient line's starting point | `135deg` |
+| `gradient.from_color` | From (start) color | `#0f4c81 50%` |
+| `gradient.to_color` | To (stop, end) color | `#fa7268 50%` |
+| `question` | Message during holding mouse/key button on `element` | `🤔 Are you sure?` |
+| `success.message` | Message after callback function | `👍 Success!` |
+| `success.color` | Color of success message | `#00b16a` |
+| `timeout` | Time for `setTimeout()` function in miliseconds; this option also define a `transition` speed | `3000` |
+
+#### Use SweetConfirm.js with options
+
 ```js
-//
+// Define options
 var options = {
   background: "#0f4c81",
   backgroundSize: "215% 100%",
@@ -91,8 +119,8 @@ var options = {
   timeout: 3000
 };
 
-//
-new SweetConfirm(button, () => SendMessage("This is fake data!"), options);
+// Init SweetConfirm.js with options
+new SweetConfirm(element, () => {}, options);
 ```
 
 ## Developers
