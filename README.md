@@ -142,7 +142,7 @@ _Thanks to Andrey Sitnik [@ai/size-limit](https://github.com/ai/size-limit)._
 
 ## Project assistance
 
-If you want to say «thank you» or/and support active development `sweetconfirm.js`:
+If you want to say «thank you» or/and support active development `SweetConfirm.js`:
 
 1. Add a GitHub Star to project.
 2. Twit about project [on your Twitter](https://twitter.com/intent/tweet?text=Drop%20an%20annoying%20pop-ups%20confirming%20the%20submission%20of%20form%20in%20your%20web%20apps%26url%3Dhttps%3A%2F%2Fgithub.com%2Fkoddr%2Fsweetconfirm.js).
