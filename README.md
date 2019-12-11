@@ -58,19 +58,17 @@ Let's start with HTML page and some CSS styles for submit button (`./index.html`
 </html>
 ```
 
-Next, time for JavaScript:
+Next, time for JavaScript (`./script.js`):
 
 
 ```js
-// ./script.js
-
 import { SweetConfirm } from "sweetconfirm.js";
 
 // Define element (button)
 var button = document.getElementById("button");
 
 // Init SweetConfirm.js to element with callback
-new SweetConfirm(button, text => {
+new SweetConfirm(button, () => {
   console.log("This is fake data!");
 });
 ```
