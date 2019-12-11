@@ -49,7 +49,7 @@ new SweetConfirm(button, text => {
 ### What about options?
 
 ```console
-SweetConfirm(element, function () {...}, [options, ...]);
+SweetConfirm ( element, function () {...}, [options, ...] )
 ```
 
 ```js
