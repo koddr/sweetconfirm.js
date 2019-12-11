@@ -1,8 +1,12 @@
+<p align="center">
+  <img width="640px" src="https://user-images.githubusercontent.com/11155743/70644758-ac31d900-1c54-11ea-854b-ef0847071dba.png" alt="sweetconfirm.js logo github"/>
+</p>
+
 <h1 align="center">👌 SweetConfirm.js</h1>
 <h4 align="center">Drop an annoying pop-ups confirming the submission of form in your web apps!</h4>
 
 <p align="center">
-  <img width="100%" src="https://user-images.githubusercontent.com/11155743/70600686-613aa600-1c01-11ea-9002-5825ec8f98cf.gif" alt="sweetconfirm.js logo github"/>
+  <img width="100%" src="https://user-images.githubusercontent.com/11155743/70600686-613aa600-1c01-11ea-9002-5825ec8f98cf.gif" alt="sweetconfirm.js demo gif"/>
 </p>
 
 <p align="center">
@@ -30,11 +34,25 @@ foo@bar:~$ npm install --save sweetconfirm.js
 
 ## How to use?
 
-```html
-<button id="button">💬 Push the button!</button>
+````css
+/* ./style.css */
+
+button {
+  display: block;
+  border-radius: 30px;
+  cursor: pointer;
+}
 ```
 
+```html
+<!-- ./index.html -->
+
+<button id="button">💬 Push the button!</button>
+````
+
 ```js
+// ./script.js
+
 import { SweetConfirm } from "sweetconfirm.js";
 
 //
