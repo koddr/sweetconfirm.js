@@ -76,3 +76,19 @@ var options = {
 //
 new SweetConfirm(button, () => SendMessage("This is fake data!"), options);
 ```
+
+## Developers
+
+- Idea and active development by [Vic Shóstak](https://github.com/koddr) (aka Koddr).
+
+## Project assistance
+
+If you want to say «thank you» or/and support active development `sweetconfirm.js`:
+
+1. Add a GitHub Star to project.
+2. Twit about project [on your Twitter](https://twitter.com/intent/tweet?text=Drop%20an%20annoying%20pop-ups%20confirming%20the%20submission%20of%20form%20in%20your%20web%20apps%26url%3Dhttps%3A%2F%2Fgithub.com%2Fkoddr%2Fsweetconfirm.js).
+3. If you want, send to project's author some money via PayPal: [@paypal.me/koddr](https://paypal.me/koddr?locale.x=en_EN).
+
+## License
+
+MIT
