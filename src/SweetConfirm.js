@@ -1,6 +1,6 @@
 /**
  * @name SweetConfirm.js
- * @description A useful zero-dependencies, only 438 Byte (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
+ * @description A useful zero-dependencies, less than 450 Bytes (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
  * @copyright 2019 Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
  *
  * @author Vic Shóstak

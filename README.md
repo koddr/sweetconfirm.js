@@ -130,8 +130,8 @@ foo@bar:~$ npm run size
   Time limit:   90 ms
   Size:         438 B with all dependencies, minified and gzipped
   Loading time: 10 ms on slow 3G
-  Running time: 77 ms on Snapdragon 410
-  Total time:   87 ms
+  Running time: 73 ms on Snapdragon 410
+  Total time:   83 ms
 ```
 
 _Thanks to Andrey Sitnik [@ai/size-limit](https://github.com/ai/size-limit)._
