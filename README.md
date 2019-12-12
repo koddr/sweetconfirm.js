@@ -16,7 +16,7 @@
   </a>
   <img src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg?style=flat" alt="code style: prettier"/>
   <img src="https://img.shields.io/badge/license-MIT-yellow.svg?style=flat" alt="license"/>
-  <a href="https://twitter.com/intent/tweet?text=Drop%20an%20annoying%20pop-ups%20confirming%20the%20submission%20of%20form%20in%20your%20web%20apps%26url%3Dhttps%3A%2F%2Fgithub.com%2Fkoddr%2Fsweetconfirm.js" target="_blank">
+  <a href="https://twitter.com/intent/tweet?text=Throw%20out%20pop-ups%20confirming%20the%20submission%20of%20form!&url=https://github.com/koddr/sweetconfirm.js" target="_blank">
     <img src="https://img.shields.io/twitter/url/https/github.com/koddr/sweetconfirm.js.svg" alt="twit link"/>
   </a>
 </p>
@@ -216,7 +216,7 @@ _Thanks to Andrey Sitnik [@ai/size-limit](https://github.com/ai/size-limit)._
 If you want to say «thank you» or/and support active development `SweetConfirm.js`:
 
 1. Add a GitHub Star to project.
-2. Twit about project [on your Twitter](https://twitter.com/intent/tweet?text=Drop%20an%20annoying%20pop-ups%20confirming%20the%20submission%20of%20form%20in%20your%20web%20apps%26url%3Dhttps%3A%2F%2Fgithub.com%2Fkoddr%2Fsweetconfirm.js).
+2. Twit about project [on your Twitter](https://twitter.com/intent/tweet?text=Throw%20out%20pop-ups%20confirming%20the%20submission%20of%20form!&url=https://github.com/koddr/sweetconfirm.js).
 3. If you want, send to project's author some money via PayPal: [@paypal.me/koddr](https://paypal.me/koddr?locale.x=en_EN).
 
 ## License
