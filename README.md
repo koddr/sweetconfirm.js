@@ -136,7 +136,7 @@ foo@bar:~$ cd sweetconfirm.js
 Let's serve it:
 
 ```console
-foo@bar:~$ python3 -m http.server 8080 --bind 127.0.0.1 --directory ./
+foo@bar:~$ python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
 And now, go to browser to see `SweetConfirm.js Example` page:
