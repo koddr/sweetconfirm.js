@@ -52,18 +52,21 @@
       </div>
     </section>
 
-    <script src="../sweetconfirm.min.js"></script>
+    <script src="/sweetconfirm.min.js"></script>
     <script>
-      var button = document.getElementById("button");
+      var button, message;
 
-      function SendMessage(element, message) {
-        document.getElementById(element).innerHTML = message;
+      button = document.getElementById("button");
+      message = document.getElementById("message");
+
+      function showMessage(element, text) {
+        element.innerHTML = text;
         console.log("This is fake data!", "Green button is disabled now.");
       }
 
       new SweetConfirm(button, () => {
-        SendMessage(
-          "message",
+        showMessage(
+          message,
           "OK! Fake data was sent to console.<br/>Refresh page for try again!"
         );
       });

@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://badge.fury.io/js/sweetconfirm.js.svg" alt="npm version"/>
-  <img src="https://img.shields.io/badge/minified_and_gzipped-438_Bytes-blue.svg" alt="bundle size"/>
+  <img src="https://img.shields.io/badge/minified_and_gzipped-446_Bytes-blue.svg" alt="bundle size"/>
   <a href="https://www.jsdelivr.com/package/npm/sweetconfirm.js" target="_blank">
     <img src="https://data.jsdelivr.com/v1/package/npm/sweetconfirm.js/badge?style=rounded" alt="jsDelivr download"/>
   </a>
@@ -92,27 +92,24 @@ Similar to `npm` way, but easily (all-in-one `./index.html` file):
   </head>
   <body>
     <button type="submit" id="button">💬 Push the button!</button>
-    
+
     <div id="message"></div>
-    
+
     <script src="https://cdn.jsdelivr.net/npm/sweetconfirm.js@0/sweetconfirm.min.js"></script>
     <script>
       // Define vars
       var button, message;
       button = document.getElementById("button");
       message = document.getElementById("message");
-      
+
       // Callback function
       function showMessage(element, text) {
         element.innerText = text;
       }
-      
+
       // Init SweetConfirm.js
       new SweetConfirm(button, () => {
-        showMessage(
-          message,
-          "OK! Refresh page for try again."
-        );
+        showMessage(message, "OK! Refresh page for try again.");
       });
     </script>
   </body>
@@ -127,11 +124,13 @@ function SweetConfirm ( element, function () {...}, [options, ...] )
 
 | **Option**              | **Description**                                                                               | **Default value**  |
 | ----------------------- | --------------------------------------------------------------------------------------------- | ------------------ |
-| `background`            | Background color for initial state, may be equal to `gradient.from_color`                     | `#0f4c81`          |
-| `backgroundSize`        | Size of `background`; for better effect must be greather than 100% at the first value         | `215% 100%`        |
+| `background`            | Background color for initial state, usually equal to `gradient.from_color`                    | `#0f4c81`          |
+| `backgroundSize`        | Size of `background`; for better effect must be greater than 100% at the first value          | `215% 100%`        |
 | `backgroundPositionIn`  | Background position for init animation                                                        | `right bottom`     |
 | `backgroundPositionOut` | Background position for end animation                                                         | `left bottom`      |
-| `transitionOut`         | A `transition` speed of out action, like `mouseup`                                            | `0.5`              |
+| `transition.init`       | Enabled initial `transition` when page is loaded (`DOMContentLoaded` event)                   | `true`             |
+| `transition.in`         | A `transition` speed in miliseconds for `DOMContentLoaded` event                              | `0.5`              |
+| `transition.out`        | A `transition` speed in miliseconds for `mouseup` event                                       | `0.5`              |
 | `gradient.deg`          | Angle or position of the gradient line's starting point                                       | `135deg`           |
 | `gradient.from_color`   | From (start) color                                                                            | `#0f4c81 50%`      |
 | `gradient.to_color`     | To (stop, end) color                                                                          | `#fa7268 50%`      |
@@ -149,7 +148,11 @@ var options = {
   backgroundSize: "215% 100%",
   backgroundPositionIn: "right bottom",
   backgroundPositionOut: "left bottom",
-  transitionOut: 0.5,
+  transition: {
+    init: true,
+    in: 0.5,
+    out: 0.5
+  },
   gradient: {
     deg: "135deg",
     from_color: "#0f4c81 50%",
@@ -196,10 +199,10 @@ http://127.0.0.1:8080/examples
 foo@bar:~$ npm run size
 
   Time limit:   90 ms
-  Size:         438 B with all dependencies, minified and gzipped
+  Size:         446 B with all dependencies, minified and gzipped
   Loading time: 10 ms on slow 3G
-  Running time: 73 ms on Snapdragon 410
-  Total time:   83 ms
+  Running time: 71 ms on Snapdragon 410
+  Total time:   81 ms
 ```
 
 _Thanks to Andrey Sitnik [@ai/size-limit](https://github.com/ai/size-limit)._
