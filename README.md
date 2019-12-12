@@ -129,8 +129,8 @@ function SweetConfirm ( element, function () {...}, [options, ...] )
 | `backgroundPositionIn`  | Background position for init animation                                                        | `right bottom`     |
 | `backgroundPositionOut` | Background position for end animation                                                         | `left bottom`      |
 | `transition.init`       | Enabled initial `transition` when page is loaded (`DOMContentLoaded` event)                   | `true`             |
-| `transition.in`         | A `transition` speed in miliseconds for `DOMContentLoaded` event                              | `0.5`              |
-| `transition.out`        | A `transition` speed in miliseconds for `mouseup` event                                       | `0.5`              |
+| `transition.in`         | A `transition` speed in seconds for `DOMContentLoaded` event                              | `0.5`              |
+| `transition.out`        | A `transition` speed in seconds for `mouseup` event                                       | `0.5`              |
 | `gradient.deg`          | Angle or position of the gradient line's starting point                                       | `135deg`           |
 | `gradient.from_color`   | From (start) color                                                                            | `#0f4c81 50%`      |
 | `gradient.to_color`     | To (stop, end) color                                                                          | `#fa7268 50%`      |
