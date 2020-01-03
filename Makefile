@@ -6,7 +6,5 @@ gh-pages:
 	&& cd ./site \
 	&& git checkout gh-pages \
 	&& git init \
-	&& git add . \
-	&& git commit -m "Deploy docs" \
-	&& git push origin master:gh-pages
-	@echo "[✔️] Docs was deployed to gh-pages branch!"
+	&& git add .
+	@echo "[✔️] Docs was created and wait for deploy to gh-pages branch!"
