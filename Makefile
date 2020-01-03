@@ -3,9 +3,8 @@
 gh-pages:
 	rm -rf ./site \
 	&& mkdocs build \
-	&& cd ./site \
 	&& git checkout gh-pages \
-	&& git init \
-	&& git add ./site/* \
-	&& git commit -m "Deploy docs"
+	&& git checkout master -- site/* \
+	&& cp -R ./site/* ./ \
+	&& rm -rf ./site
 	@echo "[✔️] Docs was created and wait for deploy to gh-pages branch!"
