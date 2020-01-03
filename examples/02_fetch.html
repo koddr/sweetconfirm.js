@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>SweetConfirm.js Example: fetch</title>
+    <style>
+      * {
+        font-family: "Open Sans", Helvetica, Arial, sans-serif;
+      }
+
+      section {
+        color: #2e3131;
+        width: calc(100vw - 20px);
+        height: calc(100vh - 20px);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      div {
+        width: 320px;
+        text-align: center;
+      }
+
+      button {
+        font-size: 16px;
+        display: block;
+        color: #ffffff;
+        padding: 20px 30px;
+        margin: 0 auto;
+        width: 225px;
+        height: auto;
+        border: 0;
+        border-radius: 30px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <div>
+        <h1>Hello, SweetConfirm.js!</h1>
+        <button id="button">💬 Push the button!</button>
+        <p id="message">
+          Star me on GitHub:<br />
+          <a href="https://github.com/koddr/sweetconfirm.js">
+            @koddr/sweetconfirm.js
+          </a>
+        </p>
+      </div>
+    </section>
+
+    <script src="/sweetconfirm.min.js"></script>
+    <script>
+      var button, users;
+
+      button = document.getElementById("button");
+
+      new SweetConfirm(button, () => {
+        fetch("https://jsonplaceholder.typicode.com/users")
+          .then(response => response.json())
+          .then(json => console.log(json));
+      });
+    </script>
+  </body>
+</html>

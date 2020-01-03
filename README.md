@@ -25,6 +25,8 @@
   A useful <strong>zero-dependencies</strong>, less than <strong>450 Bytes</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution<br/>for <strong>drop an annoying pop-ups</strong> confirming the submission of form in your web apps.
 </p>
 
+## [Docs](https://sweetconfirm.js.org), [Change log](CHANGELOG.md)
+
 ## Install
 
 Simple install to your project via `npm`:
@@ -124,13 +126,13 @@ function SweetConfirm ( element, function () {...}, [options, ...] )
 
 | **Option**              | **Description**                                                                               | **Default value**  |
 | ----------------------- | --------------------------------------------------------------------------------------------- | ------------------ |
-| `background`            | Background color for initial state, usually equal to `gradient.from_color`                    | `#0f4c81`          |
-| `backgroundSize`        | Size of `background`; for better effect must be greater than 100% at the first value          | `215% 100%`        |
-| `backgroundPositionIn`  | Background position for init animation                                                        | `right bottom`     |
-| `backgroundPositionOut` | Background position for end animation                                                         | `left bottom`      |
-| `transition.init`       | Enabled initial `transition` when page is loaded (`DOMContentLoaded` event)                   | `true`             |
-| `transition.in`         | A `transition` speed in seconds for `DOMContentLoaded` event                              | `0.5`              |
-| `transition.out`        | A `transition` speed in seconds for `mouseup` event                                       | `0.5`              |
+| `bg`            | Background color for initial state, usually equal to `gradient.from_color`                    | `#0f4c81`          |
+| `bgSize`        | Size of `background`; for better effect must be greater than 100% at the first value          | `215% 100%`        |
+| `bgPositionIn`  | Background position for init animation                                                        | `right bottom`     |
+| `bgPositionOut` | Background position for end animation                                                         | `left bottom`      |
+| `trans.init`       | Enabled initial `transition` when page is loaded (`DOMContentLoaded` event)                   | `true`             |
+| `trans.in`         | A `transition` speed in seconds for `DOMContentLoaded` event                                  | `0.5`              |
+| `trans.out`        | A `transition` speed in seconds for `mouseup` event                                           | `0.5`              |
 | `gradient.deg`          | Angle or position of the gradient line's starting point                                       | `135deg`           |
 | `gradient.from_color`   | From (start) color                                                                            | `#0f4c81 50%`      |
 | `gradient.to_color`     | To (stop, end) color                                                                          | `#fa7268 50%`      |
@@ -144,11 +146,11 @@ function SweetConfirm ( element, function () {...}, [options, ...] )
 ```js
 // Define options
 var options = {
-  background: "#0f4c81",
-  backgroundSize: "215% 100%",
-  backgroundPositionIn: "right bottom",
-  backgroundPositionOut: "left bottom",
-  transition: {
+  bg: "#0f4c81",
+  bgSize: "215% 100%",
+  bgPositionIn: "right bottom",
+  bgPositionOut: "left bottom",
+  trans: {
     init: true,
     in: 0.5,
     out: 0.5
@@ -170,7 +172,7 @@ var options = {
 new SweetConfirm(element, () => {}, options);
 ```
 
-## Live demo
+## Demo on localhost
 
 You may serve downloaded repository by simple Python 3 CLI snippet (for macOS/Linux/Windows WSL).
 
@@ -193,16 +195,16 @@ And now, go to browser to see `SweetConfirm.js Example` page:
 http://127.0.0.1:8080/examples
 ```
 
-## Size limit report
+## Size-limit report
 
 ```console
 foo@bar:~$ npm run size
 
-  Time limit:   90 ms
-  Size:         446 B with all dependencies, minified and gzipped
+  Time limit:   70 ms
+  Size:         444 B with all dependencies, minified and gzipped
   Loading time: 10 ms on slow 3G
-  Running time: 71 ms on Snapdragon 410
-  Total time:   81 ms
+  Running time: 58 ms on Snapdragon 410
+  Total time:   68 ms
 ```
 
 _Thanks to Andrey Sitnik [@ai/size-limit](https://github.com/ai/size-limit)._

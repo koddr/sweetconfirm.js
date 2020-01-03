@@ -1,7 +1,7 @@
 /**
  * @name SweetConfirm.js
  * @description A useful zero-dependencies, less than 450 Bytes (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
- * @copyright 2019 Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
+ * @copyright 2020 Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
  *
  * @author Vic Shóstak
  * @param {HTMLElement} element
@@ -19,11 +19,11 @@ const SweetConfirm = function(element, callback, options) {
   // If options is not define use default
   if (!options) {
     options = {
-      background: "#0f4c81",
-      backgroundSize: "215% 100%",
-      backgroundPositionIn: "right bottom",
-      backgroundPositionOut: "left bottom",
-      transition: {
+      bg: "#0f4c81",
+      bgSize: "215% 100%",
+      bgPositionIn: "right bottom",
+      bgPositionOut: "left bottom",
+      trans: {
         init: true,
         in: 0.5,
         out: 0.5
@@ -43,21 +43,21 @@ const SweetConfirm = function(element, callback, options) {
   }
 
   // Init styles for element
-  element.style.background = options.background;
+  element.style.background = options.bg;
   element.style.background = `linear-gradient(${options.gradient.deg}, ${options.gradient.from_color}, ${options.gradient.to_color})`;
-  element.style.backgroundSize = options.backgroundSize;
-  element.style.backgroundPosition = options.backgroundPositionIn;
+  element.style.backgroundSize = options.bgSize;
+  element.style.backgroundPosition = options.bgPositionIn;
 
   // Init transition effect
-  if (options.transition.init) {
-    element.style.transition = `all ${options.transition.in}s ease`;
+  if (options.trans.init) {
+    element.style.transition = `all ${options.trans.in}s ease`;
   }
 
   // Event: hold mouse button on element
   element.addEventListener("mousedown", () => {
     // Show question when holding
     element.innerText = options.question;
-    element.style.backgroundPosition = options.backgroundPositionOut;
+    element.style.backgroundPosition = options.bgPositionOut;
     element.style.transition = `all ${options.timeout / 1000}s ease`;
 
     // Run timeout function when holding
@@ -66,7 +66,7 @@ const SweetConfirm = function(element, callback, options) {
       // and change transition
       element.disabled = true;
       element.style.background = options.success.color;
-      element.style.transition = `all ${options.transition.out}s ease`;
+      element.style.transition = `all ${options.trans.out}s ease`;
 
       // Show success message
       element.innerText = options.success.message;
@@ -85,8 +85,8 @@ const SweetConfirm = function(element, callback, options) {
     element.innerText = name;
 
     // Follow back effect: change background and transition
-    element.style.backgroundPosition = options.backgroundPositionIn;
-    element.style.transition = `all ${options.transition.out}s ease`;
+    element.style.backgroundPosition = options.bgPositionIn;
+    element.style.transition = `all ${options.trans.out}s ease`;
   });
 };
 

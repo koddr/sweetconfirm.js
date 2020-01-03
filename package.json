@@ -1,6 +1,6 @@
 {
   "name": "sweetconfirm.js",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A useful zero-dependencies, less than 450 Bytes (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.",
   "main": "sweetconfirm.min.js",
   "scripts": {
@@ -12,10 +12,10 @@
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.13.0",
-    "@size-limit/preset-small-lib": "^2.2.2",
-    "@size-limit/time": "^2.2.2",
-    "eslint": "^6.7.2",
-    "eslint-config-prettier": "^6.7.0",
+    "@size-limit/preset-small-lib": "^2.2.4",
+    "@size-limit/time": "^2.2.4",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.9.0",
     "eslint-config-standard": "^14.1.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^10.0.0",

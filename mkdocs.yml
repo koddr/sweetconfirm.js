@@ -1,0 +1,47 @@
+site_name: SweetConfirm.js
+site_description: "A useful zero-dependencies, less than 450 Bytes (gzipped), pure JavaScript & CSS solution
+for drop an annoying pop-ups confirming the submission of form in your web apps."
+
+nav:
+    - Get started: "index.md"
+    - Installation: "installation.md"
+    - Usage:
+      - Basic usage: "basic-usage.md"
+      - CDN usage: "cdn-usage.md"
+    - Options: "options.md"
+    - Demo on localhost: "demo-on-localhost.md"
+    - Size-limit report: "size-limit-report.md"
+
+theme:
+  name: "material"
+  language: "en"
+  logo:
+    icon: "👌"
+  feature:
+    tabs: false
+  font:
+    text: "Open Sans"
+    code: "Hack"
+  palette:
+      primary: "yellow"
+      accent: "black"
+
+edit_uri: ""
+copyright: 'Copyright &copy; 2020 Vic Shóstak'
+
+repo_name: koddr/sweetconfirm.js
+repo_url: https://github.com/koddr/sweetconfirm.js
+
+extra:
+  social:
+    - type: 'twitter'
+      link: 'https://twitter.com/true_koddr'
+    - type: 'link'
+      link: 'https://1wa.co'
+
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+      linenums: true
+  - extra
