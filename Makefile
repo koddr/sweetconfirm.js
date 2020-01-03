@@ -3,8 +3,8 @@
 gh-pages:
 	rm -rf ./site \
 	&& mkdocs build \
-	&& cd ./site \
 	&& git checkout gh-pages \
+	&& cd ./site \
 	&& git init \
 	&& git add . \
 	&& git commit -m "Deploy docs"
