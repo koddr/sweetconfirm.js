@@ -1,15 +1,15 @@
-// macOS
+# macOS
 .DS_Store
 
-// IDE
+# IDE
 .vscode/
 .idea/
 
-// Node.js
+# Node.js
 node_modules/
 
-// Media
+# Media
 media/*.mov
 
-// MkDocs
+# MkDocs
 site/
