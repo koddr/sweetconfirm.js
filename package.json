@@ -11,7 +11,7 @@
     "size:why": "npm run size -- --why"
   },
   "devDependencies": {
-    "@ampproject/rollup-plugin-closure-compiler": "^0.13.0",
+    "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
     "@size-limit/preset-small-lib": "^3.0.1",
     "@size-limit/time": "^3.0.1",
     "eslint": "^7.4.0",
