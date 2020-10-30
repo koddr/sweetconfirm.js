@@ -16,7 +16,7 @@
     "@size-limit/time": "^3.0.1",
     "eslint": "^7.4.0",
     "eslint-config-prettier": "^6.9.0",
-    "eslint-config-standard": "^15.0.0",
+    "eslint-config-standard": "^16.0.0",
     "eslint-plugin-import": "^2.19.1",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^4.2.1",
