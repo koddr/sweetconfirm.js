@@ -32,7 +32,7 @@
 Simple install to your project via `npm`:
 
 ```console
-foo@bar:~$ npm install --save sweetconfirm.js
+npm install --save sweetconfirm.js
 ```
 
 Or include to your html page from fast CDN [jsDelivr](https://www.jsdelivr.com/):
@@ -179,14 +179,14 @@ You may serve downloaded repository by simple Python 3 CLI snippet (for macOS/Li
 First, clone repository:
 
 ```console
-foo@bar:~$ git clone https://github.com/koddr/sweetconfirm.js.git
-foo@bar:~$ cd sweetconfirm.js
+git clone https://github.com/koddr/sweetconfirm.js.git
+cd sweetconfirm.js
 ```
 
-Let's serve it:
+Let's serve it (with Python 3, for example):
 
 ```console
-foo@bar:~$ python3 -m http.server 8080 --bind 127.0.0.1
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
 And now, go to browser to see `SweetConfirm.js Example` page:
@@ -198,7 +198,7 @@ http://127.0.0.1:8080/examples
 ## Size-limit report
 
 ```console
-foo@bar:~$ npm run size
+npm run size
 
   Time limit:   70 ms
   Size:         444 B with all dependencies, minified and gzipped
