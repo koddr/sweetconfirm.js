@@ -3,7 +3,7 @@
 Simple install to your project via `npm`:
 
 ```console
-foo@bar:~$ npm install --save sweetconfirm.js
+npm install --save sweetconfirm.js
 ```
 
 Or include to your html page from fast CDN [jsDelivr](https://www.jsdelivr.com/):
