@@ -5,14 +5,14 @@ You may serve downloaded repository by simple Python 3 CLI snippet (for macOS/Li
 First, clone repository:
 
 ```console
-foo@bar:~$ git clone https://github.com/koddr/sweetconfirm.js.git
-foo@bar:~$ cd sweetconfirm.js
+git clone https://github.com/koddr/sweetconfirm.js.git
+cd sweetconfirm.js
 ```
 
-Let's serve it:
+Let's serve it (with Python 3, for example):
 
 ```console
-foo@bar:~$ python3 -m http.server 8080 --bind 127.0.0.1
+python3 -m http.server 8080 --bind 127.0.0.1
 ```
 
 And now, go to browser to see `SweetConfirm.js Example` page:
