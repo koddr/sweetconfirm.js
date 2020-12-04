@@ -1,7 +1,7 @@
 # Size-limit report
 
 ```console
-foo@bar:~$ npm run size
+npm run size
 
   Time limit:   70 ms
   Size:         444 B with all dependencies, minified and gzipped
