@@ -1,7 +1,7 @@
 /**
  * @name SweetConfirm.js
- * @description A useful zero-dependencies, less than 450 Bytes (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
- * @copyright 2020 Vic Shóstak <truewebartisans@gmail.com> (https://1wa.co)
+ * @description A useful zero-dependencies, less than 434 Bytes (gzipped), pure JavaScript & CSS solution for drop an annoying pop-ups confirming the submission of form in your web apps.
+ * @copyright 2021 Vic Shóstak <vic@shostak.dev> (https://shostak.dev)
  *
  * @author Vic Shóstak
  * @param {HTMLElement} element
@@ -9,7 +9,7 @@
  * @param {Object} options
  */
 
-const SweetConfirm = function(element, callback, options) {
+const SweetConfirm = function (element, callback, options) {
   // Define vars
   let timer, name;
 
@@ -26,19 +26,19 @@ const SweetConfirm = function(element, callback, options) {
       trans: {
         init: true,
         in: 0.5,
-        out: 0.5
+        out: 0.5,
       },
       gradient: {
         deg: "135deg",
         from_color: "#0f4c81 50%",
-        to_color: "#fa7268 50%"
+        to_color: "#fa7268 50%",
       },
       question: "🤔 Are you sure?",
       success: {
         message: "👍 Success!",
-        color: "#00b16a"
+        color: "#00b16a",
       },
-      timeout: 3000
+      timeout: 3000,
     };
   }
 

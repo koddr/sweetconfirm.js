@@ -10,7 +10,7 @@
 
 <p align="center">
   <img src="https://badge.fury.io/js/sweetconfirm.js.svg" alt="npm version"/>
-  <img src="https://img.shields.io/badge/minified_and_gzipped-446_Bytes-blue.svg" alt="bundle size"/>
+  <img src="https://img.shields.io/badge/minified_and_gzipped-434_Bytes-blue.svg" alt="bundle size"/>
   <a href="https://www.jsdelivr.com/package/npm/sweetconfirm.js" target="_blank">
     <img src="https://data.jsdelivr.com/v1/package/npm/sweetconfirm.js/badge?style=rounded" alt="jsDelivr download"/>
   </a>
@@ -22,7 +22,7 @@
 </p>
 
 <p align="center">
-  A useful <strong>zero-dependencies</strong>, less than <strong>450 Bytes</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution<br/>for <strong>drop an annoying pop-ups</strong> confirming the submission of form in your web apps.
+  A useful <strong>zero-dependencies</strong>, less than <strong>434 Bytes</strong> (gzipped), <strong>pure</strong> JavaScript & CSS solution<br/>for <strong>drop an annoying pop-ups</strong> confirming the submission of form in your web apps.
 </p>
 
 ## [Docs](https://sweetconfirm.js.org), [Change log](CHANGELOG.md)
@@ -201,7 +201,7 @@ http://127.0.0.1:8080/examples
 npm run size
 
   Time limit:   70 ms
-  Size:         444 B with all dependencies, minified and gzipped
+  Size:         434 B with all dependencies, minified and gzipped
   Loading time: 10 ms on slow 3G
   Running time: 58 ms on Snapdragon 410
   Total time:   68 ms
