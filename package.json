@@ -13,7 +13,7 @@
   },
   "devDependencies": {
     "@ampproject/rollup-plugin-closure-compiler": "^0.26.0",
-    "@size-limit/preset-small-lib": "^4.5.5",
+    "@size-limit/preset-small-lib": "^5.0.2",
     "@size-limit/time": "^5.0.2",
     "eslint": "^7.31.0",
     "eslint-config-prettier": "^8.3.0",
